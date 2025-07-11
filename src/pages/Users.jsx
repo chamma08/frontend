@@ -70,7 +70,7 @@ export default function Users() {
   // Fetch users from API
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/api/users");
+      const response = await axios.get("http://54.242.120.63:3001/api/users");
       console.log("Fetched users:", response.data);
       setUsers(response.data);
     } catch (error) {
