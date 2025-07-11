@@ -86,7 +86,7 @@ export default function Users() {
       email: data.email,
     };
     axios
-      .post("http://localhost:3001/api/createuser", payload)
+      .post("http://54.242.120.63:3001/api/createuser", payload)
       .then((response) => {
         fetchUsers();
         setSubmitted(false);
@@ -120,7 +120,7 @@ export default function Users() {
     console.log("Update payload:", payload);
     
     axios
-      .post("http://localhost:3001/api/updateuser", payload)
+      .post("http://54.242.120.63:3001/api/updateuser", payload)
       .then((response) => {
         console.log("Update successful:", response);
         fetchUsers();
@@ -142,7 +142,7 @@ export default function Users() {
     // Backend probably expects _id in the payload
     const payload = { _id: id };
     axios
-      .post("http://localhost:3001/api/deleteuser", payload)
+      .post("http://54.242.120.63:3001/api/deleteuser", payload)
       .then((response) => {
         fetchUsers();
       })
